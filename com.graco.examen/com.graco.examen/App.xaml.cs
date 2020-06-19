@@ -1,16 +1,23 @@
-﻿using System;
+﻿using com.graco.examen.Helpers;
+using com.graco.examen.Interfaces;
+using com.graco.examen.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace com.graco.examen
 {
     public partial class App : Application
     {
+        public static Page ContextApp { get; set; }
+        public static INavigationService NavigationService { get; } = new NavigationViewService();
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            NavigationService.Configure("LoginPage", typeof(LoginView));
+
+            MainPage = ((NavigationViewService)NavigationService).SetRootPage("LoginPage");
+
+            ContextApp = App.Current.MainPage;
         }
 
         protected override void OnStart()

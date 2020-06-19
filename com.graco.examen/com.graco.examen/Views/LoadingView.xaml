@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="com.graco.examen.Views.LoadingView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <Frame
+            Padding="10"
+            BackgroundColor="White"
+            CornerRadius="15"
+            HasShadow="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="180">
+            <StackLayout>
+                <ActivityIndicator IsRunning="True" />
+                <Label FontSize="Small" Text="Espere por favor..." />
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

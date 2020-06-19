@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="com.graco.examen.Views.LoginView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="15"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+
+            <Entry
+                HorizontalOptions="FillAndExpand"
+                Keyboard="Email"
+                Placeholder="Email"
+                Text="{Binding Email, Mode=TwoWay}" />
+            <Entry
+                HorizontalOptions="FillAndExpand"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password, Mode=TwoWay}"
+                VerticalOptions="CenterAndExpand" />
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <CheckBox IsChecked="{Binding ShareInfoCheck}" />
+                <Label
+                    FontSize="Micro"
+                    HorizontalTextAlignment="Center"
+                    Text="{StaticResource compartirString}"
+                    TextColor="DodgerBlue" />
+            </StackLayout>
+            <Button
+                BackgroundColor="DodgerBlue"
+                Command="{Binding LoginCommand}"
+                CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                Text="Iniciar sesión"
+                TextColor="White" />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

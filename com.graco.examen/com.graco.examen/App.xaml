@@ -7,5 +7,12 @@
              x:Class="com.graco.examen.App">
     <Application.Resources>
 
+        
+        <!--#region strings-->
+        <x:String x:Key="compartirString">
+            ¿Desea compartir su información?
+        </x:String>
+        <!--#endregion-->
+        
     </Application.Resources>
 </Application>
